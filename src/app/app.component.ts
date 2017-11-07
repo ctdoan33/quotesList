@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+	quotes=[];
+	sortRating(){
+		this.quotes.sort(function(a, b){
+			return b.rating-a.rating;
+		});
+	}
+	addQuote(quote){
+		this.quotes.push(quote);
+		this.sortRating();
+	}
+	vote(list){
+		this.quotes=list;
+		this.sortRating();
+	}
 }

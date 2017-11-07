@@ -1,0 +1,13 @@
+<h1>Quotes List</h1>
+<div *ngFor="let quote of list; let idx=index" [ngClass]="{'record':true}">
+	<div [ngClass]="{'text':true}">
+		<p [ngClass]="{'content':true}">{{quote.content}}</p>
+		<p [ngClass]="{'content':true}">- {{quote.author}}</p>
+	</div>
+	<h2 [ngClass]="{'rating':true}">{{quote.rating}}</h2>
+	<div [ngClass]="{'buttons':true}">
+		<button (click)="voteUp(idx)" [ngClass]="{'up':true}">Vote Up</button>
+		<button (click)="voteDown(idx)" [ngClass]="{'down':true}">Vote Down</button>
+		<button (click)="destroy(idx)" [ngClass]="{'destroy':true}">Delete</button>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+.errors{
+	color: red;
+	display: inline-block;
+	vertical-align: top;
+	width: 22%;
+	margin-left: 20px;
+}
+.inputs{
+	display: inline-block;
+	vertical-align: top;
+	text-align: right;
+	width: 70%;
+}
+#quote_input{
+	width: 98%;
+}
+.error{
+	height: 56px;
+}
